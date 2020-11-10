@@ -1,0 +1,1 @@
+select*from loja_de_games.tb_jogador;

@@ -21,7 +21,15 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 public class Jogos {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
-	private long id_Produto;
+	private long id;
+	
+	@Column
+	@NotNull
+	private String titulo;
+	
+	@Column
+	@NotNull
+	private String nome;
 	
 	@Column
 	@NotNull
@@ -31,7 +39,7 @@ public class Jogos {
 	@Column
 	@NotNull
 	@Size(min=5, max=100)
-	private String DescricaoTitulo;	
+	private String descricao;	
 	
 	
 	@ManyToOne
@@ -39,13 +47,33 @@ public class Jogos {
 	private Categoria categoria;
 
 
-	public long getId_Produto() {
-		return id_Produto;
+	public long getId() {
+		return id;
 	}
 
 
-	public void setId_Produto(long id_Produto) {
-		this.id_Produto = id_Produto;
+	public void setId(long id) {
+		this.id = id;
+	}
+
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+
+	public String getNome() {
+		return nome;
+	}
+
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 
@@ -59,13 +87,13 @@ public class Jogos {
 	}
 
 
-	public String getDescricaoTitulo() {
-		return DescricaoTitulo;
+	public String getDescricao() {
+		return descricao;
 	}
 
 
-	public void setDescricaoTitulo(String descricaoTitulo) {
-		DescricaoTitulo = descricaoTitulo;
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 
@@ -78,8 +106,6 @@ public class Jogos {
 		this.categoria = categoria;
 	}
 
-
-	
 
 	
 	

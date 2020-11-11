@@ -16,56 +16,55 @@ import org.hibernate.validator.constraints.UniqueElements;
 public class Jogador {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id_jogador;
+	private long Id;
 	
 	@Column
 	@NotNull
 	@Size (min = 10,max = 50)
-	private String nome_jogador;
+	private String nome;
 	
 	@Column
 	@NotNull
 	@Size (min = 9,max = 50)
-	private String email_jogador;
+	private String email;
 	
 	@Column
 	@NotNull
 	@Size (min = 8,max = 15)
 	@UniqueElements
-	private String senha_jogador;
+	private String senha;
 
-	public long getId_jogador() {
-		return id_jogador;
+	public long getId() {
+		return Id;
 	}
 
-	public void setId_jogador(long id_jogador) {
-		this.id_jogador = id_jogador;
+	public void setId(long id) {
+		Id = id;
 	}
 
-	public String getNome_jogador() {
-		return nome_jogador;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNome_jogador(String nome_jogador) {
-		this.nome_jogador = nome_jogador;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
-	public String getEmail_jogador() {
-		return email_jogador;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setEmail_jogador(String email_jogador) {
-		this.email_jogador = email_jogador;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
-	public String getSenha_jogador() {
-		return senha_jogador;
+	public String getSenha() {
+		return senha;
 	}
 
-	public void setSenha_jogador(String senha_jogador) {
-		this.senha_jogador = senha_jogador;
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
-	
 	
 	
 }

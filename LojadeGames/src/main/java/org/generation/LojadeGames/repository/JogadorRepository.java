@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface JogadorRepository extends JpaRepository<Jogador, Long> {
-	public List<Jogador> findAllProdutoContainIgnoreCase(String nome_jogador);
+	
 }
